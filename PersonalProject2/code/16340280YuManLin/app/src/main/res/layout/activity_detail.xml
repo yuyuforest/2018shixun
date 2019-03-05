@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.33"
+        android:background="@color/colorPurple"
+        app:layout_constraintBottom_toTopOf="@id/kind">
+        <ImageButton
+            android:id="@+id/back"
+            android:onClick="onBackButtonClick"
+            android:background="@mipmap/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="15dp"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp"
+            android:layout_toEndOf="@id/back"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/starButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="15dp"
+            android:adjustViewBounds="true"
+            android:background="@mipmap/empty_star"
+            android:onClick="onStarButtonClick" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/kind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/verticalLine"
+        app:layout_constraintTop_toBottomOf="@id/top" />
+
+    <TextView
+        android:id="@+id/nutrient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:paddingBottom="15dp"
+        android:textColor="@color/colorGreyNutrient"
+        android:textSize="15sp"
+        app:layout_constraintRight_toLeftOf="@id/verticalLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kind"
+        app:layout_constraintBottom_toTopOf="@id/horizontalLine"/>
+
+    <View
+        android:id="@+id/verticalLine"
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@color/colorGreySplit"
+        app:layout_constraintTop_toTopOf="@id/collectButton"
+        app:layout_constraintBottom_toBottomOf="@id/collectButton"
+        app:layout_constraintRight_toLeftOf="@id/collectButton" />
+
+    <ImageButton
+        android:id="@+id/collectButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:onClick="onCollectButtonClick"
+        android:background="@mipmap/collect"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        app:layout_constraintBottom_toTopOf="@id/horizontalLine"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <View
+        android:id="@+id/horizontalLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@color/colorGreySplit"
+        app:layout_constraintTop_toBottomOf="@id/nutrient" />
+
+    <TextView
+        android:id="@+id/moreInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更多资料"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/horizontalLine"
+        app:layout_constraintBottom_toTopOf="@id/horizontalLine2"/>
+
+    <View
+        android:id="@+id/horizontalLine2"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/colorGreySplit"
+        app:layout_constraintTop_toBottomOf="@id/moreInfo"
+        app:layout_constraintBottom_toTopOf="@id/bottom"/>
+
+    <ListView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/horizontalLine2">
+    </ListView>
+
+</android.support.constraint.ConstraintLayout>

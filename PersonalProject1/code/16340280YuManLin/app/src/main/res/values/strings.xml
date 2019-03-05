@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PersonalProject1</string>
+    <string name="title">中山大学智慧健康服务平台</string>
+    <string name="hint_search">请输入搜索内容</string>
+    <string name="button_search">搜索</string>
+    <string-array name="operations">
+        <item>分享信息</item>
+        <item>不感兴趣</item>
+        <item>查看更多信息</item>
+        <item>出错反馈</item>
+    </string-array>
+</resources>

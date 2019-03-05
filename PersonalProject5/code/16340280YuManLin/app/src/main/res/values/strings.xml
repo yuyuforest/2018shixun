@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">项目5</string>
+    <string name="bili_play">播放：%1$d</string>
+    <string name="bili_review">弹幕：%1$d</string>
+    <string name="bili_duration">时长：%1$s</string>
+    <string name="bili_create">发表时间：%1$s</string>
+    <string name="repo_name">仓库：%1$s</string>
+    <string name="repo_id">仓库id：%1$d</string>
+    <string name="issues_num">issues数：%1$d</string>
+    <string name="repo_description">仓库描述：%1$s</string>
+    <string name="issue_title">问题：%1$s</string>
+    <string name="issue_create">创建时间：%1$s</string>
+    <string name="issue_state">问题状态：%1$s</string>
+    <string name="issue_body">问题描述：%1$s</string>
+</resources>

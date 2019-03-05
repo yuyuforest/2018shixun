@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--食品详情页面底部的操作列表的项-->
+<TextView
+    android:id="@+id/operation"
+    android:padding="15dp"
+    android:textSize="20sp"
+    android:textColor="@color/colorBlack"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
